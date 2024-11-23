@@ -9,7 +9,10 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "lint": "expo lint"
+    "lint": "bunx biome check --write",
+    "format": "bunx biome format --write",
+    "check": "bunx biome check --write",
+    "check:fix": "bunx biome check --fix --unsafe"
   },
   "jest": {
     "preset": "jest-expo"
@@ -42,6 +45,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@biomejs/biome": "1.9.4",
     "@types/jest": "^29.5.12",
     "@types/react": "~18.3.12",
     "@types/react-test-renderer": "^18.3.0",
